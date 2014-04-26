@@ -175,10 +175,10 @@
 		4BF8E231190C14030020CEE0 /* OSBlurSlideMenu */ = {
 			isa = PBXGroup;
 			children = (
-				4BF8E232190C14030020CEE0 /* OSBlurredView.h */,
-				4BF8E233190C14030020CEE0 /* OSBlurredView.m */,
 				4BF8E234190C14030020CEE0 /* OSBlurSlideMenuController.h */,
 				4BF8E235190C14030020CEE0 /* OSBlurSlideMenuController.m */,
+				4BF8E232190C14030020CEE0 /* OSBlurredView.h */,
+				4BF8E233190C14030020CEE0 /* OSBlurredView.m */,
 				4BF8E236190C14030020CEE0 /* UIImage+BoxBlur.h */,
 				4BF8E237190C14030020CEE0 /* UIImage+BoxBlur.m */,
 			);
