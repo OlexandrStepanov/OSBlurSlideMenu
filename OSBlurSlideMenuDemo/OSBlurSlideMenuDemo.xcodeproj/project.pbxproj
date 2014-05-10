@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B5E9246191ECB97008C9BE5 /* UIImage+StackBlur.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5E9245191ECB97008C9BE5 /* UIImage+StackBlur.m */; };
 		4BF8E1D8190957710020CEE0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BF8E1D7190957710020CEE0 /* Foundation.framework */; };
 		4BF8E1DA190957710020CEE0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BF8E1D9190957710020CEE0 /* CoreGraphics.framework */; };
 		4BF8E1DC190957710020CEE0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BF8E1DB190957710020CEE0 /* UIKit.framework */; };
@@ -26,8 +27,6 @@
 		4BF8E239190C14030020CEE0 /* OSBlurredView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF8E233190C14030020CEE0 /* OSBlurredView.m */; };
 		4BF8E23A190C14030020CEE0 /* OSBlurSlideMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF8E235190C14030020CEE0 /* OSBlurSlideMenuController.m */; };
 		4BF8E23B190C14030020CEE0 /* OSBlurSlideMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF8E235190C14030020CEE0 /* OSBlurSlideMenuController.m */; };
-		4BF8E23C190C14030020CEE0 /* UIImage+BoxBlur.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF8E237190C14030020CEE0 /* UIImage+BoxBlur.m */; };
-		4BF8E23D190C14030020CEE0 /* UIImage+BoxBlur.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF8E237190C14030020CEE0 /* UIImage+BoxBlur.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4B5E9244191ECB97008C9BE5 /* UIImage+StackBlur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+StackBlur.h"; sourceTree = "<group>"; };
+		4B5E9245191ECB97008C9BE5 /* UIImage+StackBlur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+StackBlur.m"; sourceTree = "<group>"; };
 		4BF8E1D4190957710020CEE0 /* OSBlurSlideMenuDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OSBlurSlideMenuDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BF8E1D7190957710020CEE0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4BF8E1D9190957710020CEE0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -66,8 +67,6 @@
 		4BF8E233190C14030020CEE0 /* OSBlurredView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSBlurredView.m; sourceTree = "<group>"; };
 		4BF8E234190C14030020CEE0 /* OSBlurSlideMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSBlurSlideMenuController.h; sourceTree = "<group>"; };
 		4BF8E235190C14030020CEE0 /* OSBlurSlideMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSBlurSlideMenuController.m; sourceTree = "<group>"; };
-		4BF8E236190C14030020CEE0 /* UIImage+BoxBlur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+BoxBlur.h"; sourceTree = "<group>"; };
-		4BF8E237190C14030020CEE0 /* UIImage+BoxBlur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BoxBlur.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,8 +178,8 @@
 				4BF8E235190C14030020CEE0 /* OSBlurSlideMenuController.m */,
 				4BF8E232190C14030020CEE0 /* OSBlurredView.h */,
 				4BF8E233190C14030020CEE0 /* OSBlurredView.m */,
-				4BF8E236190C14030020CEE0 /* UIImage+BoxBlur.h */,
-				4BF8E237190C14030020CEE0 /* UIImage+BoxBlur.m */,
+				4B5E9244191ECB97008C9BE5 /* UIImage+StackBlur.h */,
+				4B5E9245191ECB97008C9BE5 /* UIImage+StackBlur.m */,
 			);
 			name = OSBlurSlideMenu;
 			path = ../../OSBlurSlideMenu;
@@ -288,7 +287,7 @@
 				4BF8E1E8190957710020CEE0 /* AppDelegate.m in Sources */,
 				4BF8E1E4190957710020CEE0 /* main.m in Sources */,
 				4BF8E238190C14030020CEE0 /* OSBlurredView.m in Sources */,
-				4BF8E23C190C14030020CEE0 /* UIImage+BoxBlur.m in Sources */,
+				4B5E9246191ECB97008C9BE5 /* UIImage+StackBlur.m in Sources */,
 				4BF8E23A190C14030020CEE0 /* OSBlurSlideMenuController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,7 +298,6 @@
 			files = (
 				4BF8E203190957710020CEE0 /* OSBlurSlideMenuDemoTests.m in Sources */,
 				4BF8E239190C14030020CEE0 /* OSBlurredView.m in Sources */,
-				4BF8E23D190C14030020CEE0 /* UIImage+BoxBlur.m in Sources */,
 				4BF8E23B190C14030020CEE0 /* OSBlurSlideMenuController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

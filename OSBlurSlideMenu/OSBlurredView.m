@@ -7,7 +7,7 @@
 //
 
 #import "OSBlurredView.h"
-#import "UIImage+BoxBlur.h"
+#import "UIImage+StackBlur.h"
 
 @interface OSBlurredView()
 
@@ -115,10 +115,8 @@
 #pragma mark - Blurring
 
 - (void)updateBlurWithDegree:(CGFloat)degree {
-    UIImage *blurredImage = [self.superviewSnapshot blurredImageWithRadius:(degree * self.blurLevel)
-                                                                iterations:3
-                                                                 tintColor:self.blurTintColor
-                                                                 blendMode:kCGBlendModePlusDarker];
+    UIImage *blurredImage = [self.superviewSnapshot stackBlur:(degree * self.blurLevel) tintColor:self.blurTintColor];
+    
     self.imageView.image = blurredImage;
     self.imageView.alpha = MIN(degree*2.5f, 1.f);
 }
