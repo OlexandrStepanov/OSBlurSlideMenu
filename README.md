@@ -2,6 +2,7 @@
 
 iOS slide menu view controller with blurring effect.
 Inspired by http://vimeo.com/69072524.
+http://youtu.be/pYfWmO8RRoI
 
 
 ## Requirements
