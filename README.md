@@ -33,7 +33,7 @@ Method for initialization:
 Refer to OSBlurSlideMenuDemo for live sample of usage.
 
 
-# Acknowledgements
+## Acknowledgements
 For blurring used stack blur from https://github.com/tomsoft1/StackBluriOS.
 
 
