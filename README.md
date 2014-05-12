@@ -1,7 +1,8 @@
 # OSBlurSlideMenu
 
 iOS slide menu view controller with blurring effect.
-<br>Inspired by http://vimeo.com/69072524.
+<br>
+<img src="https://dl.dropboxusercontent.com/u/13584616/OSBlurSlideMenuDemo.gif" alt="OSBlurSlideMenu demonstration" width="213" height="360" />
 <br>http://youtu.be/pYfWmO8RRoI
 
 
@@ -36,7 +37,7 @@ Refer to OSBlurSlideMenuDemo for live sample of usage.
 
 ## Acknowledgements
 For blurring used stack blur from https://github.com/tomsoft1/StackBluriOS.
-
+Inspired by http://vimeo.com/69072524.
 
 ## License
 
