@@ -24,7 +24,8 @@ All you need to do is drop `RESideMenu` files into your project, and add `#impor
 
 ## Example Usage
 
-The main class to use is `OSBlurSlideMenuController`. Method for initialization:
+The main class to use is `OSBlurSlideMenuController`.
+Method for initialization:
 
 ``` objective-c
 - (id)initWithMenuViewController:(UIViewController *)menuViewController andContentViewController:(UIViewController *)contentViewController
