@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "ContentViewController.h"
 #import "MenuViewController.h"
-#import "OSBlurSlideMenuController.h"
+#import "OSBlurSlideMenu.h"
 
 @implementation AppDelegate
 

@@ -42,6 +42,7 @@
 /* Begin PBXFileReference section */
 		4B5E9244191ECB97008C9BE5 /* UIImage+StackBlur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+StackBlur.h"; sourceTree = "<group>"; };
 		4B5E9245191ECB97008C9BE5 /* UIImage+StackBlur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+StackBlur.m"; sourceTree = "<group>"; };
+		4B5E924E1920FD35008C9BE5 /* OSBlurSlideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSBlurSlideMenu.h; sourceTree = "<group>"; };
 		4BF8E1D4190957710020CEE0 /* OSBlurSlideMenuDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OSBlurSlideMenuDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BF8E1D7190957710020CEE0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4BF8E1D9190957710020CEE0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -174,6 +175,7 @@
 		4BF8E231190C14030020CEE0 /* OSBlurSlideMenu */ = {
 			isa = PBXGroup;
 			children = (
+				4B5E924E1920FD35008C9BE5 /* OSBlurSlideMenu.h */,
 				4BF8E234190C14030020CEE0 /* OSBlurSlideMenuController.h */,
 				4BF8E235190C14030020CEE0 /* OSBlurSlideMenuController.m */,
 				4BF8E232190C14030020CEE0 /* OSBlurredView.h */,
