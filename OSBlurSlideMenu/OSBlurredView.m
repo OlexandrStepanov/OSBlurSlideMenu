@@ -9,14 +9,28 @@
 #import "OSBlurredView.h"
 #import "UIImage+StackBlur.h"
 
-@interface OSBlurredView()
+@interface OSBlurredView() {
+    dispatch_queue_t _bluringQueue;
+}
 
 @property (nonatomic, strong) UIImage *superviewSnapshot;
 @property (nonatomic, strong) UIImageView *imageView;
+@property (atomic, readwrite) BOOL updatingBlur;
+
++ (dispatch_queue_t)blurringQueue;
 
 @end
 
 @implementation OSBlurredView
+
++ (dispatch_queue_t)blurringQueue {
+    static dispatch_once_t onceToken;
+    static dispatch_queue_t instance;
+    dispatch_once(&onceToken, ^{
+        instance = dispatch_queue_create("blurring_queue", nil);
+    });
+    return instance;
+}
 
 #pragma mark Initialization
 
@@ -26,7 +40,7 @@
     self.backgroundColor = [UIColor clearColor];
     
     self.imageView = [[UIImageView alloc] initWithFrame:self.bounds];
-    self.imageView.backgroundColor = [UIColor lightGrayColor];
+    self.imageView.backgroundColor = [UIColor clearColor];
     self.imageView.contentMode = UIViewContentModeScaleToFill;
     [self addSubview:self.imageView];
 }
@@ -114,11 +128,19 @@
 
 #pragma mark - Blurring
 
-- (void)updateBlurWithDegree:(CGFloat)degree {
-    UIImage *blurredImage = [self.superviewSnapshot stackBlur:(degree * self.blurLevel) tintColor:self.blurTintColor];
-    
-    self.imageView.image = blurredImage;
-    self.imageView.alpha = MIN(degree*2.5f, 1.f);
+- (void)forceUpdate:(BOOL)forceFlag blurWithDegree:(CGFloat)degree {
+    if (forceFlag || !self.updatingBlur) {
+        NSLog(@"updating blur with degree = %f", degree);
+        self.updatingBlur = YES;
+        dispatch_async([OSBlurredView blurringQueue], ^{
+            UIImage *blurredImage = [self.superviewSnapshot stackBlur:(degree * self.blurLevel) tintColor:self.blurTintColor];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                self.imageView.image = blurredImage;
+                self.imageView.alpha = MIN(degree*2.5f, 1.f);
+                self.updatingBlur = NO;
+            });
+        });
+    }
 }
 
 

@@ -15,6 +15,6 @@
 @property (nonatomic) BOOL drawWhiteCover;
 
 - (void)createSnapshot;
-- (void)updateBlurWithDegree:(CGFloat)degree;
+- (void)forceUpdate:(BOOL)forceFlag blurWithDegree:(CGFloat)degree;
 
 @end

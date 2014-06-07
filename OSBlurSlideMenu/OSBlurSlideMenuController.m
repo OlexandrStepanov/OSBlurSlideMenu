@@ -265,12 +265,13 @@
 	NSTimeInterval duration = animated ? kSlideAnimationDuration : 0;
     
     [self showHideBlurView:YES];
+    [self.blurView createSnapshot];
 		
 	[self.menuViewController beginAppearanceTransition:YES animated:animated];
 	[self.contentViewController viewWillSlideOut:animated inSlideMenuController:self];
 	
     self.blurView.alpha = 0.0;
-    [self.blurView updateBlurWithDegree:1.0f];
+    [self.blurView forceUpdate:YES blurWithDegree:1.0f];
 	[UIView animateWithDuration:duration delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         self.blurView.alpha = 1.0;
 		self.menuViewController.view.frame = [self frameForMenuView];
@@ -416,6 +417,9 @@
 		}
         
         [self showHideBlurView:YES];
+        if (!self.menuWasOpenAtPanBegin) {
+            [self.blurView createSnapshot];
+        }
 	}
 	
 	CGPoint translation = [panGesture translationInView:panGesture.view];
@@ -431,7 +435,7 @@
         blurDegree = 1.f - blurDegree;
     }
     NSLog(@"blurRadius: %f", blurDegree);
-    [self.blurView updateBlurWithDegree:blurDegree];
+    [self.blurView forceUpdate:NO blurWithDegree:blurDegree];
     
     if (self.menuWasOpenAtPanBegin) {
         CGRect startFrame = [self frameForMenuView];
@@ -477,7 +481,7 @@
                 }];
 			}
             else {
-                [self.blurView updateBlurWithDegree:1.f];
+                [self.blurView forceUpdate:YES blurWithDegree:1.f];
                 
                 [self.menuViewController beginAppearanceTransition:NO animated:YES];
                 [UIView animateWithDuration:animationDuration delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
@@ -494,7 +498,7 @@
 		{
 			if (self.menuWasOpenAtPanBegin)
 			{
-                [self.blurView updateBlurWithDegree:1.f];
+                [self.blurView forceUpdate:YES blurWithDegree:1.f];
 
                 [UIView animateWithDuration:animationDuration delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
                     self.menuViewController.view.frame = [self frameForMenuView];
@@ -543,7 +547,6 @@
         }
         [self.view insertSubview:self.blurView belowSubview:self.menuViewController.view];
         self.blurView.alpha = 1.f;
-        [self.blurView createSnapshot];
     }
     else {
         [self.blurView removeFromSuperview];
