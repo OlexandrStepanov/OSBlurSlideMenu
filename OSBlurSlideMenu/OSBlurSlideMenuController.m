@@ -419,6 +419,9 @@
 	}
 	
 	CGPoint translation = [panGesture translationInView:panGesture.view];
+    if (self.slideDirection == OSBlurSlideMenuControllerSlideFromRightToLeft) {
+        translation.x *= -1.f;
+    }
     CGFloat blurDegree = translation.x / self.view.bounds.size.width;
     if (self.menuWasOpenAtPanBegin) {
         blurDegree *= -1.f;

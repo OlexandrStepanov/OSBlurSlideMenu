@@ -21,6 +21,9 @@
     ContentViewController *menuScreen = [mainStoryBoard instantiateViewControllerWithIdentifier:@"MenuScreen"];
     OSBlurSlideMenuController *slideController = [[OSBlurSlideMenuController alloc] initWithMenuViewController:menuScreen andContentViewController:contentScreen];
     
+    //  Uncomment below to test right to left pan gesture
+    slideController.slideDirection = OSBlurSlideMenuControllerSlideFromRightToLeft;
+    
     self.window.rootViewController = slideController;
     [self.window makeKeyAndVisible];
     
