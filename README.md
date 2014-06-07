@@ -21,7 +21,7 @@ Build and run the `OSBlurSlideMenuDemo` project in Xcode to see `OSBlurSlideMenu
 
 ## Installation
 
-All you need to do is drop `RESideMenu` files into your project, and add `#import "OSBlurSlideMenu.h"` to the top of classes that will use it.
+All you need to do is drop `OSBlurSlideMenu` folder into your project, and add `#import "OSBlurSlideMenu.h"` to the top of classes that will use it.
 
 
 ## Example Usage
@@ -41,7 +41,7 @@ Inspired by http://vimeo.com/69072524.
 
 ## License
 
-RESideMenu is available under the Apache v2.0 license.
+OSBlurSlideMenu is available under the Apache v2.0 license.
 Refer to LICENSE file for details.
 
 Copyright © 2014 Oleksandr Stepanov.
