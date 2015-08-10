@@ -443,14 +443,14 @@
 		4BF8E20A190957710020CEE0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BlurSlideMenuDemo.app/BlurSlideMenuDemo";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/OSBlurSlideMenuDemo.app/OSBlurSlideMenuDemo";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "BlurSlideMenuDemo/BlurSlideMenuDemo-Prefix.pch";
+				GCC_PREFIX_HEADER = "BlurSlideMenuDemo/OSBlurSlideMenuDemo-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -465,14 +465,14 @@
 		4BF8E20B190957710020CEE0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BlurSlideMenuDemo.app/BlurSlideMenuDemo";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/OSBlurSlideMenuDemo.app/OSBlurSlideMenuDemo";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "BlurSlideMenuDemo/BlurSlideMenuDemo-Prefix.pch";
+				GCC_PREFIX_HEADER = "BlurSlideMenuDemo/OSBlurSlideMenuDemo-Prefix.pch";
 				INFOPLIST_FILE = "BlurSlideMenuDemoTests/OSBlurSlideMenuDemoTests-Info.plist";
 				PRODUCT_NAME = OSBlurSlideMenuDemoTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
